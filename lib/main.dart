@@ -1,6 +1,8 @@
 import 'package:akaju_project/utils/utils.dart';
 import 'package:flutter/material.dart';
-import 'package:akaju_project/pages/login_page.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:akaju_project/views/login_page.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(MyApp());
@@ -9,13 +11,19 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        useMaterial3: true,
-        colorScheme: ColorScheme.fromSeed(seedColor: AppColors.akajuBackgroundColor),
-      ),
-      home: LoginPage(),
+    return ScreenUtilInit(
+      designSize: Size(375, 812),
+      minTextAdapt: true,
+      builder: (context, child) {
+        return MaterialApp(
+          debugShowCheckedModeBanner: false,
+          theme: ThemeData(
+            textTheme: GoogleFonts.montserratTextTheme(),
+            colorScheme: ColorScheme.fromSeed(seedColor: AppColors.akajuBackgroundColor),
+          ),
+          home: LoginPage(),
+        );
+      },
     );
   }
 }

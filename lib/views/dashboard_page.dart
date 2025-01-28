@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:akaju_project/pages/management_page.dart';
-import 'package:akaju_project/pages/production_page.dart';
-import 'package:akaju_project/pages/warehouse_page.dart';
+import 'package:akaju_project/views/management_page.dart';
+import 'package:akaju_project/views/production_page.dart';
+import 'package:akaju_project/views/warehouse_page.dart';
 
 class DashboardPage extends StatelessWidget {
   @override
